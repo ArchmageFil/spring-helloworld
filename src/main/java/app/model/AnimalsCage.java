@@ -7,13 +7,19 @@ import org.springframework.stereotype.Component;
 public class AnimalsCage {
 
     @Autowired
-    private Animal animal;
+    private Animal dog;
+    @Autowired
+    private Timer timer;
 
     public void whatAnimalSay() {
         System.out.println("Say:");
-        System.out.println(animal.toString());
+        System.out.println(dog.toString());
         System.out.println("At:");
-        System.out.println(new Timer().getTime());
+        System.out.println(timer.getTime());
         System.out.println("________________________");
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 }
